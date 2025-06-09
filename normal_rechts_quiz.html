@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Was ist noch normal rechts?</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f9ff; padding: 20px; }
+        h1 { color: #003366; }
+        .frage { margin-bottom: 20px; }
+        button { padding: 10px 20px; margin: 5px; background-color: #0055a5; color: white; border: none; cursor: pointer; }
+        #ergebnis { margin-top: 20px; font-weight: bold; }
+    </style>
+    <script>
+        function antworten(id) {
+            const ergebnis = document.getElementById('ergebnis');
+            if (id === 'richtig') {
+                ergebnis.textContent = "✅ Korrekt: Das ist demokratischer Patriotismus!";
+            } else {
+                ergebnis.textContent = "❌ Falsch: Das fällt nicht mehr unter normalen Rechtskonservatismus.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>🎯 Was ist noch normal rechts?</h1>
+<div class="frage">
+    <p>1. Man liebt die deutsche Flagge, geht zu Schützenfesten und möchte die Grenzen sichern:</p>
+    <button onclick="antworten('richtig')">Patriotisch</button>
+    <button onclick="antworten('falsch')">Rechtsextrem</button>
+</div>
+<div class="frage">
+    <p>2. Man will Gewalt gegen Andersdenkende:</p>
+    <button onclick="antworten('falsch')">Patriotisch</button>
+    <button onclick="antworten('richtig')">Rechtsextrem</button>
+</div>
+<div id="ergebnis"></div>
+</body>
+</html>
